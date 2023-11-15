@@ -47,13 +47,11 @@ pip3 install factory-boy
 
 2. Define a Factory:
 Create 'myapp/factories.py' and run the following command:
-- import factory
-from .models import MyModel
 
-class MyModelFactory(factory.Factory):
+    import factory from .models import MyModel
+    class MyModelFactory(factory.Factory):
     class Meta:
         model = MyModel
-
     name = factory.Faker('word')
     description = factory.Faker('text')
 
